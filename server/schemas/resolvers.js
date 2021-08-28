@@ -1,11 +1,10 @@
-// TODO: Define the query and mutation functionality to work with the Mongoose Models
 const { User } = require('../models');
 
 const resolvers = {
     Query: {
-        me: async (parent, email) => {
-            return User.findOne({ email });
-        }
+        me: async (parent, args, context) => {
+            return User.findOne(context);
+        },
     },
 
     Mutation: {
