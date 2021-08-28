@@ -6,7 +6,6 @@ import Navbar from './components/Navbar';
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-// TODO: Create an Apollo Provider to make requests work with server
 const httpLink = createHttpLink({
   uri: '/graphql',
 })
